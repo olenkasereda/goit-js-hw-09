@@ -2,6 +2,7 @@ let getEl = selector => document.querySelector(selector);
 getEl('button[data-start]').addEventListener('click', startChangeСolorBody);
 getEl('button[data-stop]').addEventListener('click', stopChangeСolorBody);
 const DELAY = 1000;
+let timerId = null;
 //----------------------------------------------------------------
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
